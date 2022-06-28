@@ -52,7 +52,7 @@ h1 {
 #about-me h2 {
     justify-self: ;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
     body{
         margin: 130px;
         flex-direction: column;
