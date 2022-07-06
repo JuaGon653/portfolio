@@ -1,34 +1,75 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Juan Gonzales's Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Juan's Portfolio</title>
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
 
     <body>
-        <section>
-            <header>
+
+        <header>
+            <nav>
                 <h1>Juan Gonzales</h1>
-                <nav>
+                <section class="links">
                     <ul>
-                        <li id="about-me-link">About Me</li>
-                        <li id="my-work-link">My Work</li>
-                        <li id="contact-info-link">Contact Info</li>
+                        <li><a href="#about-me">About Me</a></li>
+                        <li><a href="#my-work">My Work</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
                     </ul>
-                </nav>
-            </header>
-        </section>
+                </section>
+            </nav>
+        </header>
 
         <section id="banner">
-            <img src="./assets/images/Header-background-2.png" alt="banner">
-            <h2>Welcome to my page!</h2>
+            <img src="./assets/images/Header-background-2.png">
+            <h2>Welcome to my personal portfolio!</h1>
         </section>
 
-        <section id="about-me">
-            <img id="profile-photo" src="./assets/images/IMG_5177.JPG" alt="Juan Gonzales">
-            <h2>About Me</h2>
+        <section id="photo-me">
+            <img src="./assets/images/me.JPG">
         </section>
+
+
+        <section id="about-me">
+            <h1>About Me</h1>
+            <p>Hello World! My name is Juan Gonzales, I am currently 18 years old, with my 
+            birthday being on August 18th, 2003. I am currently learning web development in hopes of 
+            making a career out of it. I love combining the worlds of logic and creative design to make 
+            eye-catching, accessible, and user-friendly websites and applications. 
+            </p>
+        </section>
+
+        <section id="my-work">
+            <h1>My Work</h1>
+            <section class="row">
+                <a class="course-col">
+                    <h3>2. Project2</h3>
+                    <img src="./assets/images/realistic-coming-soon-background_23-2148889082.jpg">
+                </a>
+
+                <a target="_blank" href ="https://juagon653.github.io/code-refractor/" class="course-col" id="first">
+                    <h3>1. Horiseon</h3>
+                    <img src="./assets/images/horiseon.png">
+                </a>
+
+                <a class="course-col">
+                    <h3>3. Project3</h3>
+                    <img src="./assets/images/realistic-coming-soon-background_23-2148889082.jpg">
+                </a>
+            </section>
+        </section>
+
+        <section id="contact">
+            <h1>Contact Me</h1>
+            <ul>
+                <li><a>830-127-3422</a></li>
+                <li><a target="_blank" href="https://twitter.com/i/flow/login">Twitter</a></li>
+                <li><a target="_blank" href="https://www.instagram.com/accounts/login/">Instagram</a></li>
+                <li><a target="_blank" href="https://www.facebook.com/">Facebook</a></li>
+            </ul>
+        </section>
+
     </body>
 </html>

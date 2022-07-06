@@ -1,69 +1,234 @@
-body{
-    display:inline;
-    margin: 0px;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida sans';
 }
+
+/* Nav Bar */
 header {
-    display: flex;
     position: fixed;
-    top: 0;
     width: 100%;
-    height: 75px;
     background-color: darkcyan;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 3;
-    color: white;
+    z-index: 1;
 }
-ul {
-    list-style-type: none;
-    margin-right: 10px;
-}
-li {
-    display: inline;
-    margin-left: 10px;
-    text-decoration: underline;
-    font-size: 20px;
-}
-h1 {
-    margin-left: 10px;
+header nav h1 {
     font-size: 40px;
+    color: wheat;
 }
-#profile-photo {
-    width: 350px;
-    height: 450px
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
 }
+.links {
+    flex: 1;
+    text-align: right;
+}
+.links ul li {
+    list-style-type: none;
+    position: relative;
+    display: inline-block;
+    padding: 7px;
+    font-size: 21px;
+}
+.links ul li a{
+    color: white;
+    text-decoration: none;
+}
+.links ul li a:hover{
+    color: brown;
+}
+
+/* banner */
 #banner img {
-    width:100vw;
-    height: 150px;
+    width: 100%;
+    height: 135px;
+    margin-bottom: -4px;
 }
-#banner h2 {
+#banner h2{
     position: absolute;
     top: 90px;
-    right: 10px;
+    right: 20px;
     color: white;
-    font-size: 26px; 
 }
-#about-me {
+
+/* my photo */
+#photo-me{
     display: flex;
-    background-color: gray;
-    height: 450px;
-    margin-top: -4px;
+    margin-top: 0;
+    justify-content: center;
+    background-color: darkgrey;
 }
-#about-me h2 {
-    justify-self: ;
+img{
+    width: 80%
 }
-@media screen and (max-width: 900px) {
-    body{
-        margin: 130px;
+
+/* about me */
+#about-me{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 75px;
+    align-items: space-between;
+    justify-items: space-between;
+}
+#about-me h1 {
+    display: inline;
+    font-size: 35px;
+    align-self: center;
+}
+#about-me p{
+    align-self: center;
+    margin-left: 75px;
+    padding-left: 75px;
+    border-left: 3px solid red;
+    text-align: left;
+}
+
+/* my work */
+#my-work {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 75px;
+}
+#my-work h1 {
+    font-size: 35px;
+}
+.row{
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+#my-work #first img{
+    width: 70%;
+    margin-bottom: 2%;
+}
+#my-work a{
+    padding: 3px 10px;
+    background-color: blanchedalmond;
+    margin-bottom: 3%;
+    text-decoration: none;
+    color: black;
+    border-radius: 7px;
+    font-size: 25px;
+}
+#my-work a:hover{
+    box-shadow: 10px 10px 8px gray;
+}
+
+.course-col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 65%;
+    border-radius: 10px;
+    padding: 20px 12px;
+    background-color: blanchedalmond;
+    margin: 10px 5px;
+    justify-content: center;
+    align-items: center;
+}
+.course-col h3{
+    margin: 10px;
+}
+#first{
+    flex-basis: 100%;
+}
+
+/* contact me */
+#contact{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 30px 0;
+    width:80%;
+    align-items: center;
+    justify-content: center;
+}
+#contact h1{
+    font-size: 35px;
+    text-align: center;
+}
+#contact ul{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+#contact ul li{
+    display: inline;
+    font-size: 18px;
+    margin-left: 20px;
+}
+#contact ul li a{
+    text-decoration: none;
+    color: darkcyan;
+}
+#contact ul li a:hover{
+    cursor: pointer;
+    color: lightcoral;
+}
+
+@media(max-width:700px){
+    nav{
         flex-direction: column;
     }
-    header {
-        flex-direction: column;
-        height: 130px;
-        justify-content: center;
-        line-height: 0px;
+    header nav h1 {
+        font-size: 30px;
     }
-    #banner {
-        content-visibility: hidden;
+
+
+    #banner img {
+        height: 120px
+    }
+    #banner{
+        padding-top: 25px;
+        text-align: center;
+    }
+    #banner h2{
+        width: 95%;
+        font-size: 18px;
+        padding-top: 20px;
+        text-align: right;
+    }
+
+
+    #about-me {
+        flex-direction: column;
+        padding-top: 35px;
+    }
+    #about-me h1{
+        margin-top: 55px;
+    }
+    #about-me p{
+        margin: 0;
+        padding-top: 20px;
+        padding-left: 0;
+        border-left: none;
+    }
+    #my-work {
+        flex-direction: column;
+    }
+
+
+    #my-work{
+        padding-top: 35px;
+    }
+    #my-work h1{
+        margin-top: 55px;
+    }
+    .row{
+        flex-direction: column;
+        align-items: center;
+    }
+    #first{
+        order: -1
+    }
+
+
+    #contact ul{
+        flex-direction: column;
     }
 }
